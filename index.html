@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="game">
+      <header>
+        <h1>typing speed test game</h1>
+      </header>
+      <main>
+        <div class="container">
+          <div class="select-box">
+            <label for="levels">Select a level:</label>
+            <select id="levels" name="levels">
+              <option value="easy">easy</option>
+              <option value="normal">normal</option>
+              <option value="hard">hard</option>
+            </select>
+          </div>
+          <div class="lvl">
+            level <span class="level"></span> seconds number
+            <span class="seconds"></span>
+          </div>
+          <div class="time-and-score">
+            <div class="time">time left: <span></span> seconds</div>
+            <div class="score">
+              score <span class="your-score">0</span> from
+              <span class="total"></span>
+            </div>
+          </div>
+          <button class="start">start playing</button>
+          <div class="the-word"></div>
+          <input id="input" type="text" placeholder="type the word " />
+          <div class="up-comming">the words will appear here</div>
+        </div>
+      </main>
+      <footer>
+        <div class="finish">
+          <p>game over</p>
+          <button onclick="location.reload()" class="try-again">
+            try again
+          </button>
+        </div>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

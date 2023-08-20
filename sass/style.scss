@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #e5e5e5;
+  height: 90vh;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  .game {
+    width: 100%;
+    header {
+      background-color: slateblue;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 999;
+      h1 {
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 22px;
+        font-family: cursive;
+        text-align: center;
+      }
+    }
+    main {
+      position: relative;
+      top: 80px;
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .select-box {
+          width: 100%;
+          background-color: #fff;
+          padding: 15px;
+          label {
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-right: 10px;
+          }
+          #levels {
+            border: none;
+            background-color: slateblue;
+            color: #fff;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 10px;
+            width: 50%;
+            outline: none;
+            cursor: pointer;
+            option {
+              appearance: none;
+              padding: 10px;
+              background-color: #fff;
+              color: #252525;
+              font-size: 14px;
+            }
+            &:hover {
+              filter: brightness(120%);
+            }
+          }
+        }
+        .lvl {
+          background-color: #fff;
+          padding: 15px;
+          text-transform: capitalize;
+          text-align: center;
+          line-height: 2;
+          span {
+            color: hsl(248, 53%, 58%);
+            font-weight: bold;
+            &::before {
+              content: "[ ";
+            }
+            &::after {
+              content: " ]";
+            }
+          }
+        }
+        .start {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          border: none;
+          background-color: slateblue;
+          color: #fff;
+          padding: 15px;
+          font-weight: bold;
+          font-size: 20px;
+          text-transform: capitalize;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s;
+          &:hover {
+            filter: brightness(120%);
+          }
+        }
+        .the-word {
+          text-transform: capitalize;
+          text-align: center;
+          font-size: 45px;
+          color: slateblue;
+          font-weight: bold;
+          user-select: none;
+        }
+        #input {
+          width: 100%;
+          border: 2px solid slateblue;
+          border-radius: 5px;
+          padding: 15px;
+          caret-color: slateblue;
+          font-weight: bold;
+          font-size: 16px;
+          outline-color: transparent;
+          cursor: text;
+          &:focus {
+            outline-color: slateblue;
+            border-color: transparent;
+          }
+          &::placeholder {
+            text-transform: capitalize;
+            opacity: 0.5;
+            color: gray;
+          }
+        }
+        .up-comming {
+          display: flex;
+          background-color: #fff;
+          padding: 15px;
+          gap: 10px;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          div {
+            border-radius: 5px;
+            background-color: slateblue;
+            color: #fff;
+            padding: 5px;
+            font-weight: bold;
+            text-transform: capitalize;
+          }
+        }
+        .time-and-score {
+          display: flex;
+          background-color: #fff;
+          padding: 15px;
+          justify-content: space-between;
+          align-items: center;
+          .time {
+            text-transform: capitalize;
+            span {
+              font-weight: bold;
+              color: slateblue;
+            }
+          }
+          .score {
+            text-transform: capitalize;
+            span {
+              color: slateblue;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      box-shadow: 0 0 500px #999;
+      display: none;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      .finish {
+        background-color: #fff;
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 50px;
+        p {
+          text-transform: capitalize;
+          font-weight: bold;
+          font-size: 40px;
+          color: orangered;
+        }
+        .try-again {
+          width: 100%;
+          padding: 10px;
+          font-weight: bold;
+          background-color: orangered;
+          color: #fff;
+          text-transform: capitalize;
+          border: none;
+          cursor: pointer;
+          margin-top: 20px;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
